@@ -1,0 +1,16 @@
+<div class="border border-primary p-3">
+  <h3>Sala de Chat</h3>
+  @for (mensaje of mensajes; track mensaje) {
+  <p>{{ mensaje }}</p>
+  }
+  <div class="d-flex">
+    @for (u of users; track u) {
+    <app-mensaje-usuario
+      [user]="u"
+      (mensajeListo)="nuevoMensaje($event)"
+    ></app-mensaje-usuario>
+    }
+    <!--     <app-mensaje-usuario user="Pepe"></app-mensaje-usuario>
+    <app-mensaje-usuario user="María" class="ms-3"></app-mensaje-usuario> -->
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="card border border-success p-2 flex-fill">
+  <div class="card-body">
+    <h5 class="card-title">Usuario: {{ user.name }}</h5>
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea
+        class="form-control"
+        id="mensaje"
+        [(ngModel)]="mensaje"
+        rows="3"
+      ></textarea>
+    </div>
+    <button class="btn btn-primary mt-3" (click)="mandarMensaje()">
+      Guardar
+    </button>
+  </div>
+</div>
