@@ -1,0 +1,39 @@
+<div class="card flex-fill" id="card-Mensaje">
+  <div class="card-body">
+    <h5 class="card-title">Usuario: {{ user.name }}</h5>
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea
+        class="form-control"
+        id="mensaje"
+        [(ngModel)]="mensaje"
+        rows="5"
+      ></textarea>
+    </div>
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 100px"
+    >
+      <div class="row w-100">
+        <button
+          class="col-6 btn btn-primary mt-3 d-flex justify-content-center align-items-center"
+          (click)="mandarMensaje()"
+        >
+          Guardar
+        </button>
+        <div
+          class="col-6 d-flex flex-column align-items-center justify-content-center"
+        >
+          <label for="inp-color">Color del texto</label>
+          <input
+            type="color"
+            id="inp-color"
+            value="{{ user.color }}"
+            [(ngModel)]="user.color"
+            class="form-control form-control-color mt-2"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

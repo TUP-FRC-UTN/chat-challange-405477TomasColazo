@@ -1,0 +1,35 @@
+#card-Mensaje {
+  border-color: #48cfcb;
+  border-width: 4px;
+  border-style: ridge;
+  border-radius: 10px;
+  padding: 5px;
+}
+textarea {
+  border-color: #229799;
+  border-width: 3px;
+  border-radius: 7px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #424242;
+  margin-bottom: 5px;
+}
+
+.card-title {
+  color: #424242;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.btn.btn-primary {
+  background-color: #229799;
+  font-weight: bold;
+  font-size: 16px;
+  border-color: #424242;
+  border-width: 2px;
+}
+.color-input {
+}
