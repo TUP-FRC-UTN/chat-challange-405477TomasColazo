@@ -12,7 +12,7 @@ import { User } from '../models/user';
   styleUrl: './sala.component.css',
 })
 export class SalaComponent implements OnInit {
-  mensajes: string[] = [];
+  mensajes: { mensaje: string; user: User }[] = [];
   users: User[] = [];
 
   ngOnInit(): void {
@@ -26,8 +26,11 @@ export class SalaComponent implements OnInit {
     ];
   }
 
-  nuevoMensaje(event: { mensaje: string; userName: string }): void {
-    const x = `${event.userName}: ${event.mensaje}`;
-    this.mensajes.push(x);
+  nuevoMensaje(event: { mensaje: string; user: User }): void {
+    const nuevoMensaje = {
+      mensaje: `${event.user.name}: ${event.mensaje}`,
+      user: event.user,
+    };
+    this.mensajes.push(nuevoMensaje);
   }
 }

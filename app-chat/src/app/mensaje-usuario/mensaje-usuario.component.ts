@@ -14,10 +14,14 @@ export class MensajeUsuarioComponent {
   mensaje: string = '';
   @Output() mensajeListo = new EventEmitter<{
     mensaje: string;
-    userName: string;
+    user: User;
   }>();
 
   mandarMensaje() {
-    this.mensajeListo.emit({ mensaje: this.mensaje, userName: this.user.name });
+    this.mensajeListo.emit({
+      mensaje: this.mensaje,
+      user: this.user,
+    });
+    this.mensaje = '';
   }
 }
