@@ -3,8 +3,13 @@
   <div class="card-body">
     <ul class="list-group list-group-flush"></ul>
     @for (mensaje of mensajes; track mensaje) {
-    <li class="list-group-item" [ngStyle]="{ color: mensaje.user.color }">
-      {{ mensaje.mensaje }}
+    <li class="list-group-item d-flex justify-content-between">
+      <span [ngStyle]="{ color: mensaje.user.color }">{{
+        mensaje.mensaje
+      }}</span>
+      <span class="text-muted" style="font-size: 0.9em">{{
+        mensaje.fecha
+      }}</span>
     </li>
     }
     <div class="d-flex">
